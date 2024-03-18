@@ -2,7 +2,7 @@ version: 0.1
 
 env:
    variables:
-      IMAGE_REPO_NAME: udanalytics
+      IMAGE_REPO_NAME: myecr
       IMAGE_TAG: latest
 phases:
   pre_build:
