@@ -11,7 +11,12 @@ Before deploying the Coworking Space Microservice, ensure that you have the foll
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install sql-service bitnami/postgresql --set primary.persistence.enabled=false
 export POSTGRES_PASSWORD=$(kubectl get secret --namespace default sql-service-postgresql -o jsonpath="{.data.postgres-password}" | base64 -d)
-sh run_sql.sh
+
+export DB_USERNAME=myuser
+export DB_PASSWORD=mypassword
+export DB_HOST=127.0.0.1
+export DB_PORT=5433
+export DB_NAME=mydatabase
 ```
 2. **Dockerization:** build and push `Dockerfile` for the Python application.
 ```
