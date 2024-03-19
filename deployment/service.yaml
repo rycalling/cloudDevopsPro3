@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: coworking-project
+  name: coworking-project
+spec:
+  ports:
+  - port: 5153
+    protocol: TCP
+    targetPort: 5153
+  selector:
+    app: coworking-project
+  type: ClusterIP

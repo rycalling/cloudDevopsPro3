@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  DB_HOST: "127.0.0.1"
+  DB_PORT: "5432"
+  DB_NAME: postgres
+metadata:
+  name: env-config
