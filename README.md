@@ -1,5 +1,4 @@
-# cloudDevopsPro3
-# Coworking Space Microservice
+# cloudDevopsPro3: Coworking Space Microservice
 This README serves as documentation to detail how  deployment process works and how we can deploy changes. it helps an experienced software developer to understand the technologies and tools in the build and deploy process as well as provide insight into how to release new builds. The Coworking service provides business analysts with basic analytics data on user activity in the coworking space service. 
 ## Prerequisites
 Before deploying the Coworking Space Microservice, ensure that you have the following **tools and resources set up**:
