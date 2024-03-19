@@ -23,6 +23,22 @@ docker push <ACCOUNT>.dkr.ecr.us-east-1.amazonaws.com/myecr:<version>
 4. **EKS Deployment:** deploy changes to Kubernetes cluster with `kubectl apply -f deployment/` command. This will make the API available within the cluster.
 5. **API Logs:** verify the deployment with `kubectl logs <POD_NAME>` or the corresponding logs in AWS CloudWatch.
 
+## Deliverables
+1. Postgres database with a Helm Chart.
+2. Dockerfile for the Python application.
+3. Build pipeline with AWS CodeBuild to build and push a Docker image into AWS ECR.
+4. Screenshot of AWS CodeBuild pipeline for your project submission.
+5. Screenshot of AWS ECR repository for the application's repository.
+6. Service and deployment using Kubernetes configuration files to deploy the application.
+7. All the Kubernetes config files used for deployment (ie YAML files).
+  Screenshot of running the kubectl get svc command.
+  Screenshot of kubectl get pods.
+  Screenshot of kubectl describe svc <DATABASE_SERVICE_NAME>.
+  Screenshot of kubectl describe deployment <SERVICE_NAME>.
+8. AWS CloudWatch for application logs.
+  Screenshot of AWS CloudWatch logs for the application.
+Create a README.md file
+
 ## Further Release process
 1. Commit your code changes to the GitHub repository.
 2. Automatically trigger the AWS CodeBuild pipeline on GitHub `push` action to build and push a new Docker image to AWS ECR. Image is built and pushed with an `$CODEBUILD_BUILD_NUMBER` defined as an environment variable in the AWS CodeBuild configuration so it should be changed accordingly.
