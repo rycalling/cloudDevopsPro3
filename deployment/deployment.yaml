@@ -49,13 +49,13 @@ spec:
           timeoutSeconds: 5
         env:
         - name: DB_HOST
-          value: sql-service-postgresql
+          value: postgresql-86944b65cb-7k7b5
         - name: DB_PORT
           value: "5432"
         - name: DB_USERNAME
-          value: $DB_USERNAME
+          value: myuser
         - name: DB_PASSWORD
-          value:$MDB_PASSWORD
+          value: mypassword
         - name: DB_NAME
-          value: postgres
+          value: mydatabase
       restartPolicy: Always
