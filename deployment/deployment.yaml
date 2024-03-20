@@ -48,14 +48,29 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 5
         env:
-        - name: DB_HOST
-          value: postgresql-service
-        - name: DB_PORT
-          value: "5432"
         - name: DB_USERNAME
-          value: myuser
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: DB_USERNAME
         - name: DB_PASSWORD
-          value: mypassword
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: DB_PASSWORD
         - name: DB_NAME
-          value: mydatabase
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-env
+              key: DB_NAME
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-env
+              key: DB_HOST
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-env
+              key: DB_PORT
       restartPolicy: Always
