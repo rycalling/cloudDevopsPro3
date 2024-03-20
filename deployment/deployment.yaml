@@ -33,7 +33,7 @@ spec:
       - name: coworking
 
 
-        image: 799139823639.dkr.ecr.us-east-1.amazonaws.com/myecr:latest
+        image: 799139823639.dkr.ecr.us-east-1.amazonaws.com/newecr:latest
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
